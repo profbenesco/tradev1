@@ -69,11 +69,13 @@ async function startBot(page, xml) {
         } catch (_) {}
     }
 
-    // Load the strategy into the workspace.
-    await page.evaluate(xmlString => {
-        const dom = window.Blockly.utils.xml.textToDom(xmlString);
-        window.Blockly.Xml.clearWorkspaceAndLoadFromXml(dom, window.Blockly.derivWorkspace);
-    }, xml);
+        // Load a custom strategy only if one was provided.
+    if (xml) {
+        await page.evaluate(xmlString => {
+            const dom = window.Blockly.utils.xml.textToDom(xmlString);
+            window.Blockly.Xml.clearWorkspaceAndLoadFromXml(dom, window.Blockly.derivWorkspace);
+        }, xml);
+    }
     await sleep(3000);
 
     // Wait until connected/authorised enough for the Run button to be usable, then click it.

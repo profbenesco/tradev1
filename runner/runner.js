@@ -46,7 +46,10 @@ function loadSession() {
 }
 
 function loadStrategy() {
-    if (!fs.existsSync(STRATEGY_FILE)) throw new Error(`Strategy file not found: ${STRATEGY_FILE}`);
+    if (!fs.existsSync(STRATEGY_FILE)) {
+        log('No strategy.xml found - using the strategy built into the app');
+        return null;
+    }
     return fs.readFileSync(STRATEGY_FILE, 'utf8');
 }
 

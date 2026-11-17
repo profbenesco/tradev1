@@ -1,7 +1,7 @@
 // Adds "Run 24/7" and "Stop 24/7" buttons to your Netlify bot site.
 (function () {
     // EDIT THIS: your Render service URL (no trailing slash).
-    var RUNNER_URL = 'https://YOUR-SERVICE.onrender.com';
+    var RUNNER_URL = 'https://tradev1.onrender.com';
 
     function getSecret(force) {
         var s = null;

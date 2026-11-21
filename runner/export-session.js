@@ -10,7 +10,7 @@ const fs = require('fs');
 const readline = require('readline');
 const { chromium } = require('playwright');
 
-const TARGET_URL = process.env.TARGET_URL || 'https://tradev1.netlify.app';
+const TARGET_URL = process.env.TARGET_URL || 'https://tradev1.pages.dev';
 
 (async () => {
     const browser = await chromium.launch({ headless: false });

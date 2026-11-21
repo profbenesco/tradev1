@@ -1,7 +1,7 @@
 // 24/7 runner for the tradev1 bot.
 // Environment variables (set in Render):
 //   RUNNER_SECRET (required) a long random password
-//   ALLOWED_ORIGIN  default https://tradev1.netlify.app
+//   ALLOWED_ORIGIN  default https://tradev1.pages.dev
 //   TARGET_URL      default = ALLOWED_ORIGIN
 //   DATA_DIR        default ./data
 //   AUTO_RESUME     default "true"

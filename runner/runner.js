@@ -13,7 +13,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { chromium } = require('playwright');
 
-const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://tradev1.netlify.app';
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://tradev1.pages.dev';
 const TARGET_URL = process.env.TARGET_URL || ALLOWED_ORIGIN;
 const SECRET = process.env.RUNNER_SECRET || '';
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');

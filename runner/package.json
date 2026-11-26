@@ -1,0 +1,13 @@
+{
+  "name": "tradev1-runner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runs the tradev1 bot in a headless browser so it keeps trading after your own browser closes",
+  "scripts": {
+    "start": "node runner.js",
+    "export-session": "node export-session.js"
+  },
+  "dependencies": {
+    "playwright": "1.49.1"
+  }
+}
